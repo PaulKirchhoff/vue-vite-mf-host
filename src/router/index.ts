@@ -2,9 +2,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HostView from "../views/HostView.vue";
 import HostInfoView from "../views/HostInfoView.vue";
+import RemoteAppView from "../views/RemoteAppView.vue";
 
 const routes = [
   { path: '/', component: HostView },
+  { path: '/remote-app', component: RemoteAppView },
   { path: '/host-info', component: HostInfoView }
 ]
 
@@ -18,7 +20,9 @@ async function loadRemoteRoutes() {
   remoteRouter.getRoutes().forEach((route: any) => {
     console.log("Route", route)
     router.addRoute(route);
-  })
+  });
+  console.log("routes", router.getRoutes())
+
 }
 
 loadRemoteRoutes();

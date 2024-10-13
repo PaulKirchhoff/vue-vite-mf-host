@@ -1,4 +1,4 @@
-declare module 'remote_app/info' {
+declare module 'remote_app/App' {
   const component: any;
   export default component;
 }

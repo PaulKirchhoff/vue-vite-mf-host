@@ -6,10 +6,10 @@ import { vuetify } from './plugins/vuetify'
 import router from './router'
 import 'vuetify/styles'
 
-const InfoView = defineAsyncComponent(() => import('remote_app/App'))
+const RemoteApp = defineAsyncComponent(() => import('remote_app/App'))
 
 createApp(App)
     .use(router)
     .use(vuetify)
-    .component("InfoView", InfoView)
+    .component("RemoteApp", RemoteApp)
     .mount('#app')
